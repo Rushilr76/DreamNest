@@ -7,7 +7,7 @@ const cors = require("cors");
 
 app.use(cors({ 
     origin: "https://dream-nest-frontend-lovat.vercel.app",
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow appropriate HTTP methods
+    methods: ["GET", "POST", 'DELETE'], // Allow appropriate HTTP methods
  }));
 
 const authRoutes = require("./routes/auth.js")
