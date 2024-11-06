@@ -6,7 +6,9 @@ const dotenv = require("dotenv").config();
 const cors = require("cors");
 
 app.use(cors({ 
-    origin: "https://dream-nest-frontend-lovat.vercel.app"
+    origin: "https://dream-nest-frontend-lovat.vercel.app",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow appropriate HTTP methods
+    credentials: true, // If you're using cookies or authentication headers
  }));
 
 const authRoutes = require("./routes/auth.js")
