@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Vercel and other deployment configurations
+.vercel/
+dist/
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Coverage directory
+coverage/
+
+# Build output
+build/

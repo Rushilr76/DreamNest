@@ -1,0 +1,149 @@
+@import "../styles/variables.scss";
+@import "../styles/breakpoints.scss";
+
+.create-listing {
+  background-color: $lightgrey;
+  padding: 40px 60px 120px;
+
+  @include mm {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    color: $blue;
+  }
+
+  &_step1, &_step2 {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+
+    @include sm {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: $pinkred;
+    }
+
+    hr {
+      margin: 15px 0 25px;
+    }
+
+    h3 {
+      margin: 40px 0 20px;
+      color: $blue;
+    }
+
+    .category-list, .type-list, .amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .category, .type, .facility {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 90px;
+        border: 1px solid $grey;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &_icon {
+          font-size: 30px;
+          color: black;
+        }
+
+        p {
+          font-weight: 600;
+          text-align: center;
+          color: black;
+        }
+
+        &:hover {
+          border: 2px solid $pinkred;
+          background-color: $lightgrey;
+        }
+      }
+
+      .selected {
+        border: 2px solid $pinkred;
+        background-color: $lightgrey;
+      }
+    }
+
+    .full, .half {
+      max-width: 700px;
+    }
+
+    .half {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      @include ml {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    .location {
+      p {
+        font-weight: 700;
+        margin: 20px 0 10px;
+      }
+      input {
+        border: 1px solid $grey;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .basics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+
+      .basic {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 15px;
+        border: 1px solid $grey;
+        border-radius: 10px;
+
+        p {
+          font-weight: 600;
+        }
+
+        &_count {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .submit_btn {
+    margin-top: 40px;
+    @include buttonStyle;
+
+    &:hover {
+      box-shadow: 0 0 10px 3px rgb(117, 117, 117);
+    }
+  }
+}
