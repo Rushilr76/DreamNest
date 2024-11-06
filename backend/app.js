@@ -4,12 +4,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:5173" })); // Allow requests from the Vite frontend
 
 app.use(cors({ 
-    origin: "https://dream-nest-frontend-lovat.vercel.app",
-    methods: ["POST", "GET"],
-    credentials: true
+    origin: "https://dream-nest-frontend-lovat.vercel.app"
  }));
 
 const authRoutes = require("./routes/auth.js")
