@@ -66,7 +66,7 @@ const Navbar = () => {
             <Person sx={{ color: "var(--darkgrey)" }} />
           ) : (
             <img
-              src={`http://localhost:3001/${user.profileImagePath?.replace("public", "")}`}
+              src={`https://dream-nest-backend.vercel.app/${user.profileImagePath?.replace("public", "")}`}
               alt="profile photo"
               style={{ objectFit: "cover", borderRadius: "50%" }}
             />
