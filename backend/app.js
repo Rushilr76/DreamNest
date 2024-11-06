@@ -7,7 +7,7 @@ const cors = require("cors");
 app.use(cors({ origin: "http://localhost:5173" })); // Allow requests from the Vite frontend
 
 app.use(cors({ 
-    origin: "https://dream-nest-frontend-lovat.vercel.app/",
+    origin: "https://dream-nest-frontend-lovat.vercel.app",
     methods: ["POST", "GET"],
     credentials: true
  }));
