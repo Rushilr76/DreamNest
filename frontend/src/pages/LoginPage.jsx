@@ -4,6 +4,7 @@ import "../styles/Login.scss"
 import { setLogin } from "../redux/state";
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -63,7 +64,7 @@ const LoginPage = () => {
           />
           <button type="submit">LOG IN</button>
         </form>
-        <a href="/register">Don&apos;t have an account? Sign Up Here</a>
+        <Link to={"/register"}>Don&apos;t have an account? Sign Up Here</Link>
       </div>
     </div>
   );
