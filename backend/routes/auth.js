@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
+// checking changes
 const User = require("../models/User");
 
 /* Configuration Multer for File Upload */
