@@ -6,14 +6,14 @@ const multer = require("multer");
 const User = require("../models/User");
 
 /* Configuration Multer for File Upload */
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/uploads/"); // Store uploaded files in the 'uploads' folder
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname); // Use the original file name
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "public/uploads/"); // Store uploaded files in the 'uploads' folder
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.originalname); // Use the original file name
+//   },
+// });
 
 // const upload = multer({ storage });
 
@@ -62,7 +62,7 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     console.log(err);
     res
-      .status(501)
+      .status(500)
       .json({ message: "Registration failed!", error: err.message });
   }
 });
@@ -93,7 +93,7 @@ router.post("/login", async (req, res) => {
 
   } catch (err) {
     console.log(err)
-    res.status(501).json({ error: err.message })
+    res.status(500).json({ error: err.message })
   }
 })
 
