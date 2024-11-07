@@ -2,7 +2,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
-
+// checking changes
 const User = require("../models/User");
 
 /* Configuration Multer for File Upload */
@@ -62,7 +62,7 @@ router.post("/register", upload.single("profileImage"), async (req, res) => {
   } catch (err) {
     console.log(err);
     res
-      .status(500)
+      .status(501)
       .json({ message: "Registration failed!", error: err.message });
   }
 });
@@ -93,7 +93,7 @@ router.post("/login", async (req, res) => {
 
   } catch (err) {
     console.log(err)
-    res.status(500).json({ error: err.message })
+    res.status(501).json({ error: err.message })
   }
 })
 
