@@ -1,23 +1,10 @@
 {
-    "version": 2,
-    "name" : "DreamNest",
-    "builds": [
-      { "src": "app.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "app.js" }
-    ],
-    "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          {
-            "key": "Content-Security-Policy",
-            "value": "script-src 'self' 'unsafe-inline' https://vercel.live;"
-          }
-        ]
-      }
-    ]
+  "version": 2,
+  "name" : "DreamNest",
+  "builds": [
+    { "src": "app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "app.js" }
+  ]
 }
-
-  
